@@ -11,12 +11,21 @@ const Hours = document.getElementById('hours');
 const Minutes = document.getElementById('minutes');
 const Seconds = document.getElementById('seconds');
 
-// ✅ Use ISO format for cross-browser compatibility
-const targetDate = new Date("2025-11-26T00:00:00").getTime();
+// ✅ Create the date using numeric arguments (safest method for all browsers)
+const targetDate = new Date(2025, 10, 26, 0, 0, 0).getTime(); 
+// Month is 0-indexed → 10 = November
 
 function timer() {
     const currentDate = new Date().getTime();
     const distance = targetDate - currentDate;
+
+    if (distance < 0) {
+        Days.textContent = "00";
+        Hours.textContent = "00";
+        Minutes.textContent = "00";
+        Seconds.textContent = "00";
+        return;
+    }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
@@ -27,14 +36,9 @@ function timer() {
     Hours.textContent = hours;
     Minutes.textContent = minutes;
     Seconds.textContent = seconds;
-
-    if (distance < 0) {
-        Days.textContent = "00";
-        Hours.textContent = "00";
-        Minutes.textContent = "00";
-        Seconds.textContent = "00";
-    }
 }
 
 timer(); // Run once immediately
 setInterval(timer, 1000);
+
+
