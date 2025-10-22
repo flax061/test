@@ -11,29 +11,30 @@ const Hours = document.getElementById('hours');
 const Minutes = document.getElementById('minutes');
 const Seconds = document.getElementById('seconds');
 
-const targetDate = new Date("November 26 2025 00:00:00:00").getTime();
+// ✅ Use ISO format for cross-browser compatibility
+const targetDate = new Date("2025-11-26T00:00:00").getTime();
 
-function timer () {
+function timer() {
     const currentDate = new Date().getTime();
     const distance = targetDate - currentDate;
 
-    const days = Math.floor(distance / 1000 /60 / 60 /24);
-    const hours = Math.floor(distance / 1000 /60 / 60) %24;
-    const minutes = Math.floor(distance / 1000 /60) %60;
-    const seconds = Math.floor(distance / 1000) %60;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
 
-    Days.innerHTML = days;
-    Hours.innerHTML = hours;
-    Minutes.innerHTML = minutes;
-    Seconds.innerHTML = seconds;
+    Days.textContent = days;
+    Hours.textContent = hours;
+    Minutes.textContent = minutes;
+    Seconds.textContent = seconds;
 
-    if(distance < 0) {
-        Days.innerHTML = "00";
-        Hours.innerHTML = "00";
-        Minutes.innerHTML = "00";
-        Seconds.innerHTML = "00";
+    if (distance < 0) {
+        Days.textContent = "00";
+        Hours.textContent = "00";
+        Minutes.textContent = "00";
+        Seconds.textContent = "00";
     }
-
 }
 
+timer(); // Run once immediately
 setInterval(timer, 1000);
