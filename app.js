@@ -13,11 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const Seconds = document.getElementById('seconds');
 
     // ✅ Safest date format (numeric arguments, no parsing)
-    const targetDate = new Date(2025, 10, 26, 0, 0, 0).getTime(); 
+    const targetDate = new Date("2025-10-26T00:00:00").getTime(); 
     // Month is 0-indexed → 10 = November
 
     function timer() {
         const currentDate = new Date().getTime();
+        
         const distance = targetDate - currentDate;
 
         if (isNaN(distance)) {
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     timer(); // run immediately once
     setInterval(timer, 1000);
 });
+
 
 
 
