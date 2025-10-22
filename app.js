@@ -6,39 +6,48 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 });
 
-const Days = document.getElementById('days');
-const Hours = document.getElementById('hours');
-const Minutes = document.getElementById('minutes');
-const Seconds = document.getElementById('seconds');
+document.addEventListener("DOMContentLoaded", () => {
+    const Days = document.getElementById('days');
+    const Hours = document.getElementById('hours');
+    const Minutes = document.getElementById('minutes');
+    const Seconds = document.getElementById('seconds');
 
-// ✅ Create the date using numeric arguments (safest method for all browsers)
-const targetDate = new Date(2025, 10, 26, 0, 0, 0).getTime(); 
-// Month is 0-indexed → 10 = November
+    // ✅ Safest date format (numeric arguments, no parsing)
+    const targetDate = new Date(2025, 10, 26, 0, 0, 0).getTime(); 
+    // Month is 0-indexed → 10 = November
 
-function timer() {
-    const currentDate = new Date().getTime();
-    const distance = targetDate - currentDate;
+    function timer() {
+        const currentDate = new Date().getTime();
+        const distance = targetDate - currentDate;
 
-    if (distance < 0) {
-        Days.textContent = "00";
-        Hours.textContent = "00";
-        Minutes.textContent = "00";
-        Seconds.textContent = "00";
-        return;
+        if (isNaN(distance)) {
+            console.warn("⛔ Invalid date or NaN detected");
+            return;
+        }
+
+        if (distance <= 0) {
+            Days.textContent = "00";
+            Hours.textContent = "00";
+            Minutes.textContent = "00";
+            Seconds.textContent = "00";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        Days.textContent = days.toString().padStart(2, '0');
+        Hours.textContent = hours.toString().padStart(2, '0');
+        Minutes.textContent = minutes.toString().padStart(2, '0');
+        Seconds.textContent = seconds.toString().padStart(2, '0');
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
+    timer(); // run immediately once
+    setInterval(timer, 1000);
+});
 
-    Days.textContent = days;
-    Hours.textContent = hours;
-    Minutes.textContent = minutes;
-    Seconds.textContent = seconds;
-}
 
-timer(); // Run once immediately
-setInterval(timer, 1000);
 
 
