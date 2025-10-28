@@ -374,7 +374,7 @@
 }
 
 .hero {
-    height: 100vh;
+    height: 120vh;
     background-color: #ffc0cb;
     background-size: cover;
     background-position: center;
@@ -406,6 +406,8 @@ h1 {
     font-size: 5rem;
     font-weight: 100;
 }
+
+/*
 
 .cont1 {
     height: 80vh;
@@ -440,3 +442,5 @@ h1 {
     text-align: center;
     font-size: 5rem;
 }
+
+*/
