@@ -5,6 +5,7 @@ menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
 });
+/*
 
 document.addEventListener("DOMContentLoaded", () => {
     const Days = document.getElementById('days');
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     timer(); // run immediately once
     setInterval(timer, 1000);
 });
+
 
 
 
