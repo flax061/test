@@ -279,7 +279,7 @@ alt="Barbaphesten 2025"
 <script>
 // Build a future target date: if the chosen day/month has already passed this year,
 // automatically roll to next year so the timer never shows 00 due to past date.
-const TARGET = { month: 10, day: 25, hour: 19, minute: 0, second: 0 }; // Aug=7 (0-index)
+const TARGET = { month: 10, day: 25, hour: 20, minute: 0, second: 0 }; // Aug=7 (0-index)
 const nowInit = new Date();
 let year = nowInit.getFullYear();
 let target = new Date(
@@ -327,3 +327,4 @@ document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
+
