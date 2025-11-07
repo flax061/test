@@ -1,330 +1,343 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Barbaphesten 2025</title>
-<link
-href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600;700&display=swap"
-rel="stylesheet"
-/>
-<style>
-:root {
---pink: #f7b9c7;
---pink-deep: #f19bb0;
---pink-light: #ffd7e0;
---text: #ffffff;
---shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
---radius: 22px;
---max: 1280px;
---navH: 64px;
-}
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-body {
-background: var(--pink);
-color: var(--text);
-font-family: "Fredoka", system-ui;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
-}
-a {
-text-decoration: none;
-color: var(--text);
-}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barbaphesten 2025</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink: #f7b9c7;
+        --pink-deep: #f19bb0;
+        --pink-light: #ffd7e0;
+        --text: #ffffff;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        --radius: 22px;
+        --max: 1280px;
+        --navH: 64px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--pink);
+        color: var(--text);
+        font-family: "Fredoka", system-ui;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      a {
+        text-decoration: none;
+        color: var(--text);
+      }
 
-/* NAV */
-.nav {
-position: sticky;
-top: 0;
-z-index: 10;
-backdrop-filter: saturate(1.1) blur(2px);
-background: rgba(0, 0, 0, 0.02);
-border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-.nav-inner {
-max-width: var(--max);
-margin: 0 auto;
-padding: 14px 24px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-min-height: var(--navH);
-}
-.brand {
-font-family: "Chewy";
-font-size: clamp(20px, 3vw, 30px);
-letter-spacing: 0.06em;
-color: #ff5e73;
-}
-.menu {
-display: flex;
-gap: 26px;
-}
-.menu a {
-font-family: "Chewy";
-text-transform: uppercase;
-letter-spacing: 0.06em;
-font-size: clamp(14px, 1.4vw, 18px);
-opacity: 0.9;
-transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.menu a:hover {
-opacity: 1;
-transform: translateY(-1px);
-}
+      /* NAV */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: saturate(1.1) blur(2px);
+        background: rgba(0, 0, 0, 0.02);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .nav-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: var(--navH);
+      }
+      .brand {
+        font-family: "Chewy";
+        font-size: clamp(20px, 3vw, 30px);
+        letter-spacing: 0.06em;
+        color: #ff5e73;
+      }
+      .menu {
+        display: flex;
+        gap: 26px;
+      }
+      .menu a {
+        font-family: "Chewy";
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: clamp(14px, 1.4vw, 18px);
+        opacity: 0.9;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .menu a:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
 
-/* HERO */
-.hero {
-max-width: var(--max);
-margin: 0 auto;
-padding: clamp(20px, 4vw, 56px) 24px 24px;
-display: grid;
-grid-template-columns: 1.1fr 0.9fr;
-gap: clamp(16px, 3.5vw, 44px);
-align-items: center;
-text-align: center;
-min-height: calc(
-100svh - var(--navH)
-); /* keep next section below the fold on desktop */
-}
-.heading {
-font-family: "Chewy";
-font-size: clamp(36px, 6.4vw, 88px);
-line-height: 1.03;
-text-transform: uppercase;
-text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
-margin-bottom: 1.2rem;
-}
+      /* HERO */
+      .hero {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: clamp(20px, 4vw, 56px) 24px 24px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(16px, 3.5vw, 44px);
+        align-items: center;
+        text-align: center;
+        min-height: calc(
+          100svh - var(--navH)
+        ); /* keep next section below the fold on desktop */
+      }
+      .heading {
+        font-family: "Chewy";
+        font-size: clamp(36px, 6.4vw, 88px);
+        line-height: 1.03;
+        text-transform: uppercase;
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+        margin-bottom: 1.2rem;
+      }
 
-.countdown {
-display: grid;
-grid-template-columns: repeat(2, minmax(140px, 1fr));
-gap: 28px;
-justify-content: start;
-align-content: start;
-margin-top: 22px;
-max-width: unset;
-}
-.tile {
-background: transparent;
-color: #fff;
-border-radius: 0;
-box-shadow: none;
-padding: 10px;
-text-align: center;
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.tile .value {
-font-family: "Chewy";
-font-size: clamp(26px, 5.2vw, 56px);
-}
-.tile .label {
-margin-top: 6px;
-font-size: clamp(12px, 2vw, 16px);
-opacity: 0.95;
-letter-spacing: 0.06em;
-}
+      .countdown {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 28px;
+        justify-content: start;
+        align-content: start;
+        margin-top: 22px;
+        max-width: unset;
+      }
+      .tile {
+        background: transparent;
+        color: #fff;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .tile .value {
+        font-family: "Chewy";
+        font-size: clamp(26px, 5.2vw, 56px);
+      }
+      .tile .label {
+        margin-top: 6px;
+        font-size: clamp(12px, 2vw, 16px);
+        opacity: 0.95;
+        letter-spacing: 0.06em;
+      }
 
-.sticker {
-width: 100%;
-max-height: 520px;
-object-fit: contain;
-filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.25));
-}
+      .sticker {
+        width: 100%;
+        max-height: 520px;
+        object-fit: contain;
+        filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.25));
+      }
 
-/* DRINKLISTA */
-.section {
-max-width: 1180px;
-margin: 0 auto;
-padding: clamp(24px, 5vw, 48px) 20px;
-text-align: center;
-}
-.sec-title {
-font-family: "Chewy";
-font-size: clamp(28px, 5vw, 60px);
-text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
-}
-.drink-box {
-margin: 24px auto 0;
-width: min(100%, 980px);
-background: var(--pink);
-border-radius: var(--radius);
-box-shadow: var(--shadow);
-padding: clamp(18px, 4vw, 32px);
-border: 10px solid var(--pink-light);
-}
-.drink-list {
-list-style: none;
-}
-.drink-list li {
-font-family: "Chewy";
-font-size: clamp(24px, 5vw, 56px);
-margin: 14px 0;
-position: relative;
-padding-left: 28px;
-}
-.drink-list li::before {
-content: "-";
-position: absolute;
-left: 0;
-top: 0;
-}
+      /* DRINKLISTA */
+      .section {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: clamp(24px, 5vw, 48px) 20px;
+        text-align: center;
+      }
+      .sec-title {
+        font-family: "Chewy";
+        font-size: clamp(28px, 5vw, 60px);
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+      }
+      .drink-box {
+        margin: 24px auto 0;
+        width: min(100%, 980px);
+        background: var(--pink);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: clamp(18px, 4vw, 32px);
+        border: 10px solid var(--pink-light);
+      }
+      .drink-list {
+        list-style: none;
+      }
+      .drink-list li {
+        font-family: "Chewy";
+        font-size: clamp(24px, 5vw, 56px);
+        margin: 14px 0;
+        position: relative;
+        padding-left: 28px;
+      }
+      .drink-list li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
 
-footer {
-max-width: 1180px;
-margin: 12px auto 30px;
-padding: 0 20px;
-text-align: center;
-opacity: 0.85;
-}
+      footer {
+        max-width: 1180px;
+        margin: 12px auto 30px;
+        padding: 0 20px;
+        text-align: center;
+        opacity: 0.85;
+      }
 
-/* MOBILE */
-@media (max-width: 920px) {
-.hero {
-grid-template-columns: 1fr;
-text-align: center;
-}
-.countdown {
-grid-template-columns: repeat(2, 1fr);
-gap: 18px;
-max-width: 320px;
-margin-top: 1.5rem;
-}
-.tile {
-width: 100%;
-background: transparent;
-box-shadow: none;
-}
-.sticker {
-max-width: min(460px, 82vw);
-margin: 20px auto 0;
-}
-}
-@media (max-width: 560px) {
-.menu {
-gap: 14px;
-}
-.nav-inner {
-padding: 12px 16px;
-}
-}
-</style>
-</head>
-<body>
-<header class="nav">
-<div class="nav-inner">
-<div class="brand">BARBA</div>
-<nav class="menu">
-<a href="#drinklista">Drinklista</a>
-<a href="#marke">Märke</a>
-</nav>
-</div>
-</header>
+      /* MOBILE */
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .countdown {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 18px;
+          max-width: 320px;
+          margin-top: 1.5rem;
+        }
+        .tile {
+          width: 100%;
+          background: transparent;
+          box-shadow: none;
+        }
+        .sticker {
+          max-width: min(460px, 82vw);
+          margin: 20px auto 0;
+        }
+      }
+      @media (max-width: 560px) {
+        .menu {
+          gap: 14px;
+        }
+        .nav-inner {
+          padding: 12px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="brand">BARBA</div>
+        <nav class="menu">
+          <a href="#drinklista">Drinklista</a>
+          <a href="#marke">Märke</a>
+        </nav>
+      </div>
+    </header>
 
-<main>
-<section class="hero" id="top">
-<div>
-<h1 class="heading">COUNT DOWN TILL<br />PHESTEN!</h1>
-<div class="countdown" aria-label="Nedräkning">
-<div class="tile">
-<div class="value" id="dd">19</div>
-<div class="label">Dagar</div>
-</div>
-<div class="tile">
-<div class="value" id="hh">09</div>
-<div class="label">Timmar</div>
-</div>
-<div class="tile">
-<div class="value" id="mm">06</div>
-<div class="label">Minuter</div>
-</div>
-<div class="tile">
-<div class="value" id="ss">18</div>
-<div class="label">Sekunder</div>
-</div>
-</div>
-</div>
-<div>
-<img
-class="sticker"
-src="images/markebarba2.png"
-alt="Barbaphesten 2025"
-/>
-</div>
-</section>
+    <main>
+      <section class="hero" id="top">
+        <div>
+          <h1 class="heading">COUNT DOWN TILL<br />PHESTEN!</h1>
+          <div class="countdown" aria-label="Nedräkning">
+            <div class="tile">
+              <div class="value" id="dd">32</div>
+              <div class="label">Dagar</div>
+            </div>
+            <div class="tile">
+              <div class="value" id="hh">09</div>
+              <div class="label">Timmar</div>
+            </div>
+            <div class="tile">
+              <div class="value" id="mm">06</div>
+              <div class="label">Minuter</div>
+            </div>
+            <div class="tile">
+              <div class="value" id="ss">18</div>
+              <div class="label">Sekunder</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            class="sticker"
+            src="images/markebarba2.png"
+            alt="Barbaphesten 2025"
+          />
+        </div>
+      </section>
 
-<section class="section" id="drinklista">
-<h2 class="sec-title">Drinklista</h2>
-<div class="drink-box">
-<ul class="drink-list">
-<li>Öl</li>
-<li>Cider</li>
-<li>Barbarit</li>
-<li>Dubbelbarbarit</li>
-</ul>
-</div>
-</section>
-</main>
+      <section class="section" id="drinklista">
+        <h2 class="sec-title">Drinklista</h2>
+        <div class="drink-box">
+          <ul class="drink-list">
+            <li>Öl</li>
+            <li>Cider</li>
+            <li>Barbarit</li>
+            <li>Dubbelbarbarit</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" id="bilder">
+        <div>
+          <img
+            class="sticker"
+            src="images/markebarba2.png"
+            alt="Barbaphesten 2025"
+          />
+          <img
+            class="sticker"
+            src="images/markebarba2.png"
+            alt="Barbaphesten 2025"
+          />
+        </div>
+      </section>
+    </main>
 
-<footer>© <span id="year"></span> Barbaphesten.</footer>
+    <footer>© <span id="year"></span> Barbaphesten.</footer>
 
-<script>
-// Build a future target date: if the chosen day/month has already passed this year,
-// automatically roll to next year so the timer never shows 00 due to past date.
-const TARGET = { month: 10, day: 25, hour: 20, minute: 0, second: 0 }; // Aug=7 (0-index)
-const nowInit = new Date();
-let year = nowInit.getFullYear();
-let target = new Date(
-year,
-TARGET.month,
-TARGET.day,
-TARGET.hour,
-TARGET.minute,
-TARGET.second
-);
-if (target.getTime() <= nowInit.getTime()) {
-year += 1;
-target = new Date(
-year,
-TARGET.month,
-TARGET.day,
-TARGET.hour,
-TARGET.minute,
-TARGET.second
-);
-}
-const $ = (id) => document.getElementById(id);
-function tick() {
-const now = new Date();
-let diff = target - now;
-if (diff <= 0) {
-["dd", "hh", "mm", "ss"].forEach((id) => ($(id).textContent = "00"));
-return;
-}
-const d = Math.floor(diff / 86400000);
-diff -= d * 86400000;
-const h = Math.floor(diff / 3600000);
-diff -= h * 3600000;
-const m = Math.floor(diff / 60000);
-diff -= m * 60000;
-const s = Math.floor(diff / 1000);
-$("dd").textContent = d;
-$("hh").textContent = String(h).padStart(2, "0");
-$("mm").textContent = String(m).padStart(2, "0");
-$("ss").textContent = String(s).padStart(2, "0");
-}
-tick();
-setInterval(tick, 1000);
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
+    <script>
+      // Build a future target date: if the chosen day/month has already passed this year,
+      // automatically roll to next year so the timer never shows 00 due to past date.
+      const TARGET = { month: 10, day: 25, hour: 19, minute: 0, second: 0 }; // Aug=7 (0-index)
+      const nowInit = new Date();
+      let year = nowInit.getFullYear();
+      let target = new Date(
+        year,
+        TARGET.month,
+        TARGET.day,
+        TARGET.hour,
+        TARGET.minute,
+        TARGET.second
+      );
+      if (target.getTime() <= nowInit.getTime()) {
+        year += 1;
+        target = new Date(
+          year,
+          TARGET.month,
+          TARGET.day,
+          TARGET.hour,
+          TARGET.minute,
+          TARGET.second
+        );
+      }
+      const $ = (id) => document.getElementById(id);
+      function tick() {
+        const now = new Date();
+        let diff = target - now;
+        if (diff <= 0) {
+          ["dd", "hh", "mm", "ss"].forEach((id) => ($(id).textContent = "00"));
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        diff -= d * 86400000;
+        const h = Math.floor(diff / 3600000);
+        diff -= h * 3600000;
+        const m = Math.floor(diff / 60000);
+        diff -= m * 60000;
+        const s = Math.floor(diff / 1000);
+        $("dd").textContent = d;
+        $("hh").textContent = String(h).padStart(2, "0");
+        $("mm").textContent = String(m).padStart(2, "0");
+        $("ss").textContent = String(s).padStart(2, "0");
+      }
+      tick();
+      setInterval(tick, 1000);
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
-
